@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+    <title>Cari</title>
+    <style>
+        .flex-container {
+          display: flex;
+        }
+        
+        .flex-container > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          padding: 20px;
+          font-size: 30px;
+        }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Cari..." id="input">
+        <button type="button" onclick="cari();">Cari</button>
+        <button onclick="window.print()">Cetak</button>
+        <div class="flex-container">
+            <div id="foto" align="center"></div>
+            <div id="ktp" align="center"></div>
+            <div id="bpjs" align="center"></div>
+        </div>
+        <div class="flex-container">
+            <div id="kk" align="center"></div>
+        </div>
+        <div class="flex-container">
+            <div id="skbn" align="center"></div>
+            <div id="kipk" align="center"></div>
+        </div>
+        
+            
+        <script>
+            function cari(){
+                var teks = document.getElementById("input").value;
+                const foto = document.getElementById('foto');
+                const ktp = document.getElementById('ktp');
+                const kk = document.getElementById('kk');
+                const skbn = document.getElementById('skbn');
+                const bpjs = document.getElementById('bpjs');
+                const kipk = document.getElementById('kipk');
+                foto.innerHTML = '<img src="http://dim.itera.ac.id/img/photo/'+teks+'_photo.jpg" width="200">';
+                ktp.innerHTML = '<img src="http://dim.itera.ac.id/img/photo/'+teks+'_ktp.jpg" width="300">';
+                kk.innerHTML = '<img src="http://dim.itera.ac.id/img/kartu-keluarga/'+teks+'_kartu_keluarga.jpg" width="600">';
+                skbn.innerHTML = '<img src="http://dim.itera.ac.id/img/photo/'+teks+'_skbn.jpg" width="300">';
+                bpjs.innerHTML = '<img src="http://dim.itera.ac.id/img/photo/'+teks+'_bpjs.jpg" width="300">';
+                kipk.innerHTML = '<img src="http://dim.itera.ac.id/img/photo/'+teks+'_kipk.jpg" width="300">';
+            }
+            
+        </script>
+    </body>
+</html>
